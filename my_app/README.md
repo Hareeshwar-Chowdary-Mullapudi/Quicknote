@@ -1,7 +1,16 @@
 **QuickNote — To‑Do List (my_app)**
 
-Overview
+-Overview
 - A small React + Vite to‑do list app used for learning and demos. Includes MUI components and ESLint configuration.
+
+Project Description
+- A responsive note-taking application that allows users to create, edit, organize, and manage notes efficiently.
+
+Details
+- Developed a responsive notes management application using React and modern JavaScript.
+- Implemented CRUD (Create, Read, Update, Delete) functionality for seamless note management.
+- Utilized React Hooks and state management to provide real-time UI updates and an interactive user experience.
+- Integrated Local Storage to persist notes across browser sessions.
 
 Key Features
 - Add, edit and delete notes/tasks
@@ -10,6 +19,9 @@ Key Features
 
 Tech Stack
 - React 19
+- JavaScript
+- HTML & CSS
+- Local Storage
 - Vite (rolldown-vite)
 - MUI (@mui/material) + Emotion
 - ESLint for linting
