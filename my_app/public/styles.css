@@ -83,6 +83,51 @@ footer p {
   outline: none;
 }
 
+/* Actions container to keep buttons aligned and avoid layout shifts */
+.note .note-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 8px;
+}
+.note .note-actions button {
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Smaller edit/delete icon buttons to reduce visual weight */
+.note .note-actions button[aria-label="edit"],
+.note .note-actions button[aria-label="delete"] {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  padding: 2px;
+}
+.note .note-actions button[aria-label="edit"] svg,
+.note .note-actions button[aria-label="delete"] svg {
+  font-size: 18px;
+}
+
+/* Keep Save/Cancel as small labeled buttons with subtle styling */
+.note .note-actions button[aria-label="save"],
+.note .note-actions button[aria-label="cancel"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #f5f5f5;
+  color: #333;
+  width: auto;
+  height: auto;
+}
+.note .note-actions button[aria-label="save"] {
+  background: #f5ba13;
+  color: #fff;
+}
+
 form.create-note {
   position: relative;
   width: 480px;
@@ -115,6 +160,26 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+/* While editing, inputs should visually match static text to minimize layout change */
+.note.editing input,
+.note.editing textarea {
+  border: none;
+  padding: 0;
+  margin: 0 0 6px 0;
+  background: transparent;
+  font-family: inherit;
+  color: inherit;
+}
+.note.editing input {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.note.editing textarea {
+  font-size: 1.05em;
+  line-height: 1.4;
+  white-space: pre-wrap;
 }
 .empty-state {
   width: 100%;
